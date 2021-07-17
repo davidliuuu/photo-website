@@ -1,7 +1,106 @@
+<h1>
+photo-website
+</h1>
+
+## **利用網頁前端框架React製作的一個搜尋照片的網頁小專案**
+
+### index.js
+
+```jsx
+import { BrowserRouter } from "react-router-dom";
+```
+
+```jsx
+<BrowserRouter>
+    <App />
+ </BrowserRouter>
+```
+
+### app.js
+
+```jsx
+import {Switch , Route} from "react-router-dom";
+```
+
+```jsx
+<Switch>
+        <Route path = "/" exact>
+          <Homepage />
+        </Route>
+        <Route path = "/about" exact>
+          <About />
+        </Route>
+</Switch>
+```
+
+
+```jsx
+*import* { Link } *from* "react-router-dom";
+
+<nav>
+            <ul>
+                <li><Link to="/">Home</Link></li>
+            </ul>
+            <ul>
+                <li><Link to="/about">About</Link></li>
+            </ul>
+        </nav>
+```
+
+
+## **Homepage.js**
+
+使用 https://www.pexels.com/zh-tw/ 
+內的API 來達成取得相片和搜尋相片的功能。
+
+ const search = async (url) `// fetch data from pexei API`
+ 
+ const morepicture = async ()  `// load more picture`
+
+ useEffect((),[]) `// fetch data when the page Loads up`
+
+
+### 透過Pexels網站 API 取得資料
+
+```jsx
+consts[(input , setInput)] = useState("");
+```
+
+```jsx
+const intialURL = "https://api.pexels.com/v1/curated?page=1&per_page=15";
+```
+
+```jsx
+const searchURL = `https://api.pexels.com/v1/search?query=${input}&per_page=15&page=1`;
+```
+
+
+<br>
+
 ![](https://i.imgur.com/yHd5vEC.jpg)
+
+<br>
+
 ![](https://i.imgur.com/YxquTDd.jpg)
 
+<br>
 
+
+
+
+
+## **About.js**
+
+
+![](https://i.imgur.com/ZzwMkSf.png)
+
+
+## **CSS**
+**style/**
+style.css 
+footer.css 
+nav.css 
+picture.css
 
 
 # Getting Started with Create React App
@@ -74,3 +173,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## **Reference**
+
+https://www.udemy.com/course/html5-css3-z/learn/lecture/24587898#questions
+
+https://www.pexels.com/zh-tw/api/documentation/#photos-show
+
+https://www.npmjs.com/
+
+https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi

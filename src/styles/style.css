@@ -40,6 +40,15 @@ ul {
   cursor: pointer;
 }
 
+.about {
+  padding: 1rem 0.5rem;
+  font-size: 2rem;
+}
+
+.about h4 {
+  padding: 2rem 0.5rem;
+}
+
 nav {
   background-color: #eb50eb;
 }
